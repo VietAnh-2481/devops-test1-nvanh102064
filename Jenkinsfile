@@ -24,7 +24,7 @@ pipeline {
       steps { bat 'npm install' }
     }
     stage('Build') {
-      steps { bat 'npm run build' }
+      steps { bat 'npm run buildd' }
     }
     stage('Deploy to Vercel') {
       steps { bat 'call vercel deploy --prod --yes --token %VERCEL_TOKEN%' }
